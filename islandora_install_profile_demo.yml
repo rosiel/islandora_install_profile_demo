@@ -6,7 +6,7 @@ core_version_requirement: '^8.8 || ^9'
 distribution:
   name: Islandora Install Profile Theme
   install:
-    theme: islandora_starter_theme
+    theme: islandora_base_theme
 install:
   # core
   - views

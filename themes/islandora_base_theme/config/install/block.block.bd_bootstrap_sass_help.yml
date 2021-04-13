@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - islandora_install_profile_demo_bootstrap_sass
+id: islandora_install_profile_demo_bootstrap_sass_help
+theme: islandora_install_profile_demo_bootstrap_sass
+region: content
+weight: -6
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

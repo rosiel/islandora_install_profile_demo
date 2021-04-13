@@ -1,4 +1,4 @@
-profile: bd
+profile: islandora_install_profile_demo
 blacklist:
   - core.extension
   - 'block.block.adminimal_theme*'

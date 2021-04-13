@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - islandora_install_profile_demo_bootstrap_sass
+id: islandora_install_profile_demo_bootstrap_sass_messages
+theme: islandora_install_profile_demo_bootstrap_sass
+region: highlighted
+weight: -9
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }
