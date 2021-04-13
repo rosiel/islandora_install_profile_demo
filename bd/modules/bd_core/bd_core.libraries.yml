@@ -1,0 +1,11 @@
+mystic_behaviors:
+  js:
+    js/bd_core.js: { }
+  css:
+    module:
+      css/bd_core.css: { }
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupal.ajax
+    - core/views.ajax

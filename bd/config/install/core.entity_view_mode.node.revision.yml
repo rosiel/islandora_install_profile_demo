@@ -1,0 +1,12 @@
+langcode: en
+status: false
+dependencies:
+  enforced:
+    module:
+      - node
+  module:
+    - node
+id: node.revision
+label: Revision
+targetEntityType: node
+cache: true

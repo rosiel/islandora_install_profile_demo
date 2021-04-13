@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - islandora
+    - node
+name: basic_pages
+label: 'Basic Pages'
+group: Display
+description: ''
+requireAllConditions: false
+disabled: false
+conditions:
+  node_type:
+    id: node_type
+    bundles:
+      page: page
+    negate: false
+    uuid: 585adfcd-8c6d-4696-9385-6ca9d41f46a3
+    context_mapping:
+      node: '@node.node_route_context:node'
+reactions:
+  view_mode_alter:
+    id: view_mode_alter
+    mode: node.full
+    saved: false
+weight: -10

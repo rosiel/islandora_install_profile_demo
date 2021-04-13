@@ -1,0 +1,19 @@
+rolelangcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - adminimal_theme
+id: adminimal_theme_help
+theme: adminimal_theme
+region: content
+weight: -6
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,16 @@
+<div class="horizontal-tabs clearfix lean">
+    <ul class="object_navigation__links horizontal-tabs-list">
+        {% set row_classes = [
+            default_row_class ? 'horizontal-tab-button',
+        ] %}
+        {% for key, link in links %}
+            <li {{ link.attributes.addClass(row_classes) }}>
+                {% if link.url %}
+                    <a href="{{ link.url }}"><strong>{{ link.label }}</strong></a>
+                {% else %}
+                    <strong>{{ link.label }}</strong>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+</div>

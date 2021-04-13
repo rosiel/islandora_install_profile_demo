@@ -1,0 +1,12 @@
+langcode: en
+status: true
+dependencies: {  }
+id: authenticated
+label: 'Authenticated user'
+weight: 2
+is_admin: false
+permissions:
+  - 'access content'
+  - 'access shortcuts'
+  - 'opt-in or out of matomo tracking'
+  - 'view media'

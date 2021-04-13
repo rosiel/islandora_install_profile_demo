@@ -1,0 +1,12 @@
+{
+    "name": "bd/profiles",
+    "description": "Collection of Born-Digital D8 Profiles",
+    "type": "drupal-profile-custom",
+    "authors": [
+        {
+            "name": "Hertzel Armengol",
+            "role": "Owner",
+            "email": "hertzel@born-digital.com"
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - islandora
+name: basic_image
+label: 'Basic Image'
+group: Display
+description: ''
+requireAllConditions: false
+disabled: false
+conditions:
+  media_has_term:
+    id: media_has_term
+    logic: and
+    negate: false
+    uuid: 593fbd51-f33d-4a79-9a0a-26eacc11127f
+    uri: 'http://purl.org/coar/resource_type/c_c513,http://purl.org/dc/dcmitype/StillImage'
+    context_mapping:
+      media: '@islandora.media_route_context_provider:media'
+reactions: {  }
+weight: -3

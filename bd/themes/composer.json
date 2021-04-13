@@ -1,0 +1,25 @@
+{
+    "name": "bd/theme_custom",
+    "description": "Collection of Born-Digital D8 Themes",
+    "type": "drupal-theme-custom",
+    "authors": [
+        {
+            "name": "Hertzel Armengol",
+            "role": "Owner",
+            "email": "hertzel@born-digital.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "drupal/bootstrap_sass": "5.x-dev"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "@create-symlinks"
+        ],
+        "post-update-cmd": [
+            "@create-symlinks"
+        ],
+        "create-symlinks": []
+    }
+}

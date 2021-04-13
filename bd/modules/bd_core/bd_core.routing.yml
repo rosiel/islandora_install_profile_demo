@@ -1,0 +1,8 @@
+
+bd_core.home_page_controller_index:
+  path: '/home'
+  defaults:
+    _controller: '\Drupal\bd_core\Controller\HomePageController::index'
+    _title: 'Explore Our Digital Collections'
+  requirements:
+    _permission: 'access content'
