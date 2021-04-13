@@ -1,0 +1,15 @@
+ignored_config_entities:
+  - core.extension
+  - 'block.block.adminimal_theme*'
+  - 'block.block.bartik_*'
+  - 'block.block.seven_*'
+  - 'shortcut*'
+  - 'system.menu.account*'
+  - 'system.menu.admin*'
+  - 'system.menu.devel*'
+  - 'system.menu.tools*'
+  - 'system.performance*'
+  - 'devel*'
+  - 'ds.settings*'
+  - '*islandora_install_profile_demo_client_theme*'
+  - 'color.theme.islandora_install_profile_demo_client_theme*'

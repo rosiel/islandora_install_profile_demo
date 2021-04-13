@@ -1,0 +1,55 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.home_page_featured_collections
+  module:
+    - islandora_install_profile_demo_core
+    - context
+    - islandora
+    - system
+    - views
+  theme:
+    - islandora_install_profile_demo_client_theme
+id: views_block__home_page_featured_collections_block_2
+theme: islandora_install_profile_demo_client_theme
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:home_page_featured_collections-block_2'
+settings:
+  id: 'views_block:home_page_featured_collections-block_2'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: '48'
+visibility:
+  node_has_implicit_parent:
+    id: node_has_implicit_parent
+    negate: false
+    parent_reference_field: field_member_of
+    model_uri: null
+    logic: and
+    uri: null
+    context_mapping: {  }
+  view_inclusion:
+    id: view_inclusion
+    negate: null
+    view_inclusion: {  }
+    context_mapping: {  }
+  request_path_exclusion:
+    id: request_path_exclusion
+    pages: ''
+    negate: null
+    context_mapping: {  }
+  media_source_mimetype:
+    id: media_source_mimetype
+    mimetype: ''
+    negate: false
+    context_mapping: {  }
+  request_path:
+    id: request_path
+    pages: /browse-collections
+    negate: false
+    context_mapping: {  }

@@ -1,6 +1,6 @@
 {
-    "name": "bd/profiles",
-    "description": "Collection of Born-Digital D8 Profiles",
+    "name": "profiles",
+    "description": "Collection of Islandora D8 Profiles",
     "type": "drupal-profile-custom",
     "authors": [
         {

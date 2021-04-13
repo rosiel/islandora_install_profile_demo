@@ -1,0 +1,8 @@
+
+islandora_install_profile_demo_core.home_page_controller_index:
+  path: '/home'
+  defaults:
+    _controller: '\Drupal\islandora_install_profile_demo_core\Controller\HomePageController::index'
+    _title: 'Explore Our Digital Collections'
+  requirements:
+    _permission: 'access content'

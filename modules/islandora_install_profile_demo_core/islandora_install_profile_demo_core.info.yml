@@ -1,0 +1,18 @@
+name: Islandora Install Profile Demo Core
+type: module
+description: 'Islandora install profile customizations'
+package: islandora_install_profile_demo
+core: 8.x
+dependencies:
+ - block_class:block_class
+ - twig_tweak:twig_tweak
+ - addtoany:addtoany
+ - term_condition:term_condition
+ - content_sync:content_sync
+ - config_ignore:config_ignore
+ - ds:ds
+ - file_download_link:file_download_link
+ - fixed_block_content:fixed_block_content
+ - form_options_attributes:form_options_attributes
+ - facets:facets
+ - facets:facets_summary
