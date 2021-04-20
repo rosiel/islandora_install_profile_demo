@@ -4,7 +4,7 @@ description: 'Base Islandora installation profile to be used on new sites'
 version: 1.0
 core_version_requirement: '^8.8 || ^9'
 distribution:
-  name: Islandora Install Profile Theme
+  name: Islandora Demo
   install:
     theme: islandora_base_theme
 install:
