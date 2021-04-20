@@ -85,9 +85,7 @@
     ],
     "require": {
         "php": ">=7.2",
-        "bd/bd_client_theme": "*",
-        "bd/custom": "*",
-        "bd/profiles": "*",
+        "islandora/islandora_starter_theme": "*",
         "composer/installers": "^1.9",
         "cweagans/composer-patches": "^1.7",
         "drupal/admin_toolbar": "^2.4",
