@@ -200,20 +200,6 @@
                 "web/modules/contrib/select2/select2.libraries.json"
             ]
         },
-        "drupal-scaffold": {
-            "locations": {
-                "web-root": "web/"
-            },
-            "symlink": true,
-            "overwrite": true,
-            "file-mapping": {
-                "[web-root]/.editorconfig": ".editorconfig",
-                "[web-root]/.gitattributes": ".gitattributes",
-                "[web-root]/sites/default/default.settings.php": "assets/sites/default/default.settings.php",
-                "[web-root]/sites/default/settings.local.php": "assets/sites/default/settings.local.php",
-                "[web-root]/sites/default/development.services.yml": "assets/sites/default/development.services.yml"
-            }
-        },
         "installer-types": ["bower-asset", "npm-asset"],
         "installer-paths": {
             "web/core": [
