@@ -60,27 +60,6 @@
                     "reference": "main"
                 }
             }
-        },
-        {
-            "type": "path",
-            "url": "assets/sites/all/modules/custom",
-            "options": {
-                "symlink": true
-            }
-        },
-        {
-            "type": "path",
-            "url": "assets/sites/all/themes/custom",
-            "options": {
-                "symlink": true
-            }
-        },
-        {
-            "type": "path",
-            "url": "assets/sites/all/profiles",
-            "options": {
-                "symlink": true
-            }
         }
     ],
     "require": {
