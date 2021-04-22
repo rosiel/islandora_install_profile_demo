@@ -108,3 +108,4 @@ dependencies:
 themes:
   - bootstrap_barrio
   - adminimal_theme
+  - islandora_base_theme

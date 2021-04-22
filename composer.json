@@ -84,6 +84,7 @@
         "islandora-rdm/islandora_fits": "dev-master",
         "islandora/islandora_defaults": "dev-8.x-1.x",
         "islandora/openseadragon": "dev-8.x-1.x",
+        "islandora/islandora_base_theme": "dev-main",
         "mjordan/islandora_workbench_integration": "1.0",
         "oomphinc/composer-installers-extender": "^2",
         "vlucas/phpdotenv": "4.2.0",
