@@ -41,7 +41,7 @@ function islandora_install_profile_demo_core_import_yml_configs(array $config_na
       }
     }
   } catch (Exception $e) {
-    watchdog_exception("update_error", $e, "Error importing/updating configuration",  RfcLogLevel::ERROR);
+    watchdog_exception("update_error", $e, "Error importing/updating configuration", [], RfcLogLevel::ERROR);
   }
 }
 
