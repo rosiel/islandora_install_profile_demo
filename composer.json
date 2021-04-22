@@ -17,51 +17,11 @@
     ],
     "repositories": [
         {
-            "type": "package",
-            "package": {
-                "name": "library/openseadragon",
-                "version": "2.4.2",
-                "type": "drupal-library",
-                "dist": {
-                    "url": "https://github.com/openseadragon/openseadragon/releases/download/v2.4.2/openseadragon-bin-2.4.2.zip",
-                    "type": "zip"
-                }
-            }
-        },
-        {
-            "type": "package",
-            "package": {
-                "name": "library/pdf.js",
-                "version": "2.4.456",
-                "type": "drupal-library",
-                "dist": {
-                    "url": "https://github.com/mozilla/pdf.js/releases/download/v2.4.456/pdfjs-2.4.456-dist.zip",
-                    "type": "zip"
-                }
-            }
-        },
-        {
-            "type": "composer",
-            "url": "https://asset-packagist.org"
-        },
-        {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
-        },
-        {
-            "type": "package",
-            "package": {
-                "name": "mjordan/islandora_workbench_integration",
-                "version": "1.0",
-                "type": "drupal-module",
-                "source": {
-                    "url": "https://github.com/mjordan/islandora_workbench_integration.git",
-                    "type": "git",
-                    "reference": "main"
-                }
-            }
         }
     ],
+    "prefer-stable": true,
     "require": {
         "php": ">=7.2",
         "islandora/islandora_starter_theme": "*",
@@ -130,110 +90,5 @@
         "webflo/drupal-finder": "^1.2",
         "wikimedia/composer-merge-plugin": "^2.0",
         "zaporylie/composer-drupal-optimizations": "^1.2"
-    },
-    "require-dev": {
-        "drupal/core-dev": "^8.9",
-        "drupal/twig_xdebug": "^1.2"
-    },
-    "conflict": {
-        "drupal/drupal": "*"
-    },
-    "minimum-stability": "dev",
-    "config": {
-        "sort-packages": true,
-        "discard-changes": true
-    },
-    "autoload": {
-        "classmap": [
-            "scripts/composer/ScriptHandler.php"
-        ],
-        "files": [
-            "load.environment.php"
-        ]
-    },
-    "scripts": {
-        "pre-install-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
-        ],
-        "pre-update-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
-        ],
-        "post-install-cmd": [
-            "@composer drupal:scaffold",
-            "@create-symlinks",
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
-        ],
-        "post-update-cmd": [
-            "@composer drupal:scaffold",
-            "@create-symlinks",
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
-        ],
-        "create-symlinks": [
-            "mkdir -p web/sites/all/assets/vendor && ln -sf /var/www/drupal/web/libraries/openseadragon web/sites/all/assets/vendor/",
-            "mkdir -p web/sites/default/files/library-definitions",
-            "cp web/modules/contrib/openseadragon/openseadragon.json web/sites/default/files/library-definitions"
-        ]
-    },
-    "extra": {
-        "composer-exit-on-patch-failure": true,
-        "patchLevel": {
-            "drupal/core": "-p2",
-            "islandora/islandora": "-p2",
-            "islandora/islandora_defaults": "-p2"
-        },
-        "patches": {
-            "drupal/term_reference_tree": {
-                "Fixes toURL on null error": "https://www.drupal.org/files/issues/2019-07-30/term_reference_tree-3071428-2.patch"
-            },
-            "drupal/features" : {
-                "Prevent WSOD when loading an invalid feature": "./assets/patches/tasks_24551412_-_fixed_features_wsod.patch"
-            },
-            "drupal/core" : {
-                "Fix the issue where COLOR settings are seemingly reverted with deploys": "https://www.drupal.org/files/issues/2021-02-28/2995825-52.patch"
-            }
-        },
-        "merge-plugin": {
-            "recurse": true,
-            "merge-dev": true,
-            "include": [
-                "web/modules/contrib/masonry/composer.libraries.json",
-                "web/modules/contrib/select2/select2.libraries.json"
-            ]
-        },
-        "installer-types": ["bower-asset", "npm-asset"],
-        "installer-paths": {
-            "web/core": [
-                "type:drupal-core"
-            ],
-            "web/libraries/{$name}": [
-                "type:drupal-library",
-                "type:bower-asset",
-                "type:npm-asset"
-            ],
-            "web/modules/contrib/{$name}": [
-                "type:drupal-module"
-            ],
-            "web/modules/custom/{$name}": [
-                "type:drupal-module-custom"
-            ],
-            "web/modules/bd/{$name}": [
-                "type:drupal-module-bd"
-            ],
-            "web/profiles/contrib/{$name}": [
-                "type:drupal-profile"
-            ],
-            "web/themes/contrib/{$name}": [
-                "type:drupal-theme"
-            ],
-            "web/themes/custom/{$name}": [
-                "type:drupal-theme-custom"
-            ],
-            "drush/Commands/contrib/{$name}": [
-                "type:drupal-drush"
-            ],
-            "web/profiles/{$name}": [
-                "type:drupal-profile-custom"
-            ]
-        }
     }
 }
