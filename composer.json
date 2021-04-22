@@ -54,7 +54,7 @@
         "drupal/environment_indicator": "4.x-dev",
         "drupal/facets": "1.7",
         "drupal/features": "^3.11",
-	"drdupal/file_download_link": "^1.1",
+	"drupal/file_download_link": "^1.1",
         "drupal/fontawesome": "^2.17",
         "drupal/hook_post_action": "^1.0",
         "drupal/jwt": "^1.0@beta",
