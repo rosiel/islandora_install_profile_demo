@@ -11,5 +11,5 @@ ignored_config_entities:
   - 'system.performance*'
   - 'devel*'
   - 'ds.settings*'
-  - '*islandora_install_profile_demo_client_theme*'
-  - 'color.theme.islandora_install_profile_demo_client_theme*'
+  - '*islandora_starter_theme*'
+  - 'color.theme.islandora_starter_theme*'

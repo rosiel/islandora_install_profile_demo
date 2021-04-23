@@ -33,7 +33,7 @@ reactions:
         context_mapping:
           field_member_of_target_id: '@node.node_route_context:node'
         custom_id: views_block_newspaper_block_1
-        theme: islandora_install_profile_demo_client_theme
+        theme: islandora_starter_theme
         css_class: ''
         unique: 0
         context_id: newspaper
