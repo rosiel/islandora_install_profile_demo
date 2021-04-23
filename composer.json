@@ -24,7 +24,7 @@
     "prefer-stable": true,
     "require": {
         "php": ">=7.2",
-        "islandora/islandora_starter_theme": "*",
+        "islandora/islandora_starter_theme": "dev-main",
         "composer/installers": "^1.9",
         "cweagans/composer-patches": "^1.7",
         "drupal/addtoany": "^1.9",

@@ -69,6 +69,7 @@ install:
   - media_library
   - layout_discovery
   - title_field_for_manage_display
+  - search_api_solr
   - search_api_autocomplete
   - fontawesome
   - environment_indicator
