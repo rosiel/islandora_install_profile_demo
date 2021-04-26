@@ -75,6 +75,8 @@ install:
   - environment_indicator
   - environment_indicator_ui
   - svg_image_field
+  - config_distro_ignore
+  - config_export_profile
 dependencies:
   - node
   - history
@@ -106,6 +108,8 @@ dependencies:
   - user
   - layout_library
   - islandora_install_profile_demo_core
+  - config_distro_ignore
+  - config_export_profile
 themes:
   - bootstrap_barrio
   - adminimal_theme
