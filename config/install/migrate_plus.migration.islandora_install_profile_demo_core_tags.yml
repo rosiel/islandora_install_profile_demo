@@ -10,11 +10,11 @@ field_plugin_method: null
 cck_plugin_method: null
 migration_tags:
   - islandora_install_profile_demo_core_tags
-migration_group: borndigital
-label: 'Tags migration for BD Profile'
+migration_group: islandora
+label: 'Tags migration for Islandora Install Profile'
 source:
   plugin: csv
-  path: profiles/profiles/bd/migrate/tags.csv
+  path: profiles/contrib/islandora_install_profile_demo/migrate/tags.csv
   header_row_count: 1
   ids:
     - external_uri
