@@ -100,6 +100,7 @@
         "islandora/islandora_base_theme": "dev-main",
         "library/openseadragon": "^2.4",
         "library/pdf.js": "^2.4",
+	"library/masonry": "^3.3",
         "mjordan/islandora_workbench_integration": "1.0",
         "oomphinc/composer-installers-extender": "^2",
         "vlucas/phpdotenv": "4.2.0",
