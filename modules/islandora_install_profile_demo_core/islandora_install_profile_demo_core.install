@@ -147,7 +147,6 @@ function islandora_install_profile_demo_core_update_8207(){
 }
 
 /**
- * @see https://weareborndigital.teamwork.com/#/tasks/24565532
  * Makes sure collections without parents are listed under "Browse" collections page
  */
 function islandora_install_profile_demo_core_update_8208(){
@@ -156,7 +155,6 @@ function islandora_install_profile_demo_core_update_8208(){
   ], PROFILE_PATH);
 }
 /**
- * @see https://weareborndigital.teamwork.com/#/tasks/24565004
  * Updates member of reference field, to use repository item sorted by created date as its default
  */
 function islandora_install_profile_demo_core_update_8209() {
@@ -167,7 +165,6 @@ function islandora_install_profile_demo_core_update_8209() {
 }
 
 /**
- * @see https://weareborndigital.teamwork.com/#/tasks/24563295
  * Changes global search to exclude compound object members and pages
  */
 function islandora_install_profile_demo_core_update_8210() {
@@ -178,7 +175,6 @@ function islandora_install_profile_demo_core_update_8210() {
 }
 
 /**
- * @see https://weareborndigital.teamwork.com/#/tasks/24566041
  * Changes global search to exclude compound object members and pages
  */
 function islandora_install_profile_demo_core_update_8211()
@@ -196,7 +192,6 @@ function islandora_install_profile_demo_core_update_8211()
 }
 
 /**
- * @see https://weareborndigital.teamwork.com/#/tasks/24523360
  * Programmatically create 'Terms of Use' node
  */
 function islandora_install_profile_demo_core_update_8212() {
