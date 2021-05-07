@@ -226,3 +226,12 @@ function islandora_install_profile_demo_core_update_8213() {} {
     'facets_summary.facets_summary.summary_block',
   ], PROFILE_PATH, TRUE);
 }
+
+/**
+ * Import frontpage just incase it has not already imported.
+ */
+function islandora_install_profile_demo_core_update_8214() {} {
+  islandora_install_profile_demo_core_import_yml_configs([
+    'views.view.frontpage.yml',
+  ], PROFILE_PATH);
+}
