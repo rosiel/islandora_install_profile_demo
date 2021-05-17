@@ -233,5 +233,5 @@ function islandora_install_profile_demo_core_update_8213() {} {
 function islandora_install_profile_demo_core_update_8214() {} {
   islandora_install_profile_demo_core_import_yml_configs([
     'views.view.frontpage.yml',
-  ], PROFILE_PATH);
+  ], PROFILE_PATH, TRUE);
 }
