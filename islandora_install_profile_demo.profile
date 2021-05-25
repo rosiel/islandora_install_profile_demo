@@ -101,7 +101,7 @@ function islandora_install_profile_demo_set_default_theme() {
 
 function islandora_install_profile_demo_form_install_configure_form_alter(&$form, FormState $form_state) {
   // Add a value as example that one can choose an arbitrary site name.
-  $form['site_information']['site_name']['#placeholder'] = t('Born-Digital\'s Collections');
+  $form['site_information']['site_name']['#placeholder'] = t('Islandora\'s Collections');
 }
 
 
