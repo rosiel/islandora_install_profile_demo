@@ -92,8 +92,6 @@
         "drupal/config_update": "^1.7",
         "drupal/console": "dev-master",
         "drupal/context": "4.x-dev#14c362a5c57457692cdb1335c24619e6ae76af94",
-        "drupal/core-composer-scaffold": "^9.2",
-        "drupal/core-recommended": "^9.2",
         "drupal/devel": "^4.1",
         "drupal/environment_indicator": "^4.0",
         "drupal/facets": "^1.8",
@@ -145,7 +143,6 @@
         "zaporylie/composer-drupal-optimizations": "^1.2"
     },
     "require-dev": {
-        "drupal/core-dev": "^9.2",
         "drupal/twig_xdebug": "^1.2",
         "phpspec/prophecy-phpunit": "^2"
     }
