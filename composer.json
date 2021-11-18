@@ -17,6 +17,11 @@
     ],
     "repositories" : [
         {
+                "type": "vcs",
+                "url": "https://github.com/Islandora-Devops/islandora_base_theme.git",
+            "no-api": true
+            },
+        {
             "type": "vcs",
             "url": "https://github.com/Islandora-Devops/islandora_starter_theme.git",
 	    "no-api": true
@@ -138,6 +143,7 @@
         "islandora/controlled_access_terms": "2.x-dev",
         "islandora/islandora_defaults": "2.x-dev",
         "islandora/openseadragon": "2.x-dev",
+        "islandora/islandora_base_theme": "dev-bd-d9-updates",
         "islandora/islandora_starter_theme": "dev-bd-d9-update",
         "mglaman/drupal-check": "1.1.10",
         "mjordan/islandora_workbench_integration": "^1.0",
@@ -150,5 +156,6 @@
     "require-dev": {
         "drupal/twig_xdebug": "^1.2",
         "phpspec/prophecy-phpunit": "^2"
-    }
+    },
+    "minimum-stability": "dev"
 }
