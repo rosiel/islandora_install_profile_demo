@@ -127,6 +127,7 @@
         "drupal/tmgmt": "^1.12",
         "drupal/tmgmt_google": "^1.1",
         "drupal/transliterate_filenames": "^1.5",
+        "drupal/twig_tweak": "^3.1",
         "drupal/views_block_area": "1.x-dev",
         "drupal/views_block_filter_block": "^1.0",
         "drupal/views_bulk_edit": "^2.6",
@@ -147,7 +148,10 @@
         "vlucas/phpdotenv": "4.2.0",
         "webflo/drupal-finder": "^1.2",
         "wikimedia/composer-merge-plugin": "^2.0",
-        "zaporylie/composer-drupal-optimizations": "^1.2"
+        "zaporylie/composer-drupal-optimizations": "^1.2",
+        "drupal/ds": "^3.13",
+        "drupal/title_field_for_manage_display": "^2.0",
+        "drupal/file_download_link": "^1.1"
     },
     "require-dev": {
         "drupal/twig_xdebug": "^1.2",

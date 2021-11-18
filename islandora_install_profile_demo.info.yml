@@ -106,6 +106,7 @@ dependencies:
   - drupal:user
   - drupal:layout_library
   - drupal:islandora_install_profile_demo_core
+themes:
   - bootstrap_barrio
   - adminimal_theme
   - islandora_starter_theme
