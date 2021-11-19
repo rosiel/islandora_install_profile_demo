@@ -86,7 +86,7 @@ function islandora_install_profile_demo_grant_shortcut_access() {
 function islandora_install_profile_demo_set_default_theme() {
   Drupal::configFactory()
     ->getEditable('system.theme')
-    ->set('default', 'islandora_install_profile_demo_client_theme')
+    ->set('default', 'islandora_starter_theme')
     ->set('admin', 'adminimal_theme')
     ->save(TRUE);
 
