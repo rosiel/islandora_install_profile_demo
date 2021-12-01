@@ -33,7 +33,7 @@ function islandora_install_profile_demo_core_form_alter(&$form, \Drupal\Core\For
       "#default_value" => "All",
       "#options" => [
         "All" => 'All collections',
-	4 => 'Test Collection' 
+	4 => 'Test Collection'
       ],
     ];
      */
@@ -664,9 +664,11 @@ function islandora_install_profile_demo_core_entity_view(array &$build, EntityIn
     if ($display->getComponent('object_navigation') || ($entity->bundle() === 'extracted_text')) {
       if ($entity->bundle() != 'extracted_text') {
         $empty_field_resource_type = (!empty($entity->get('field_resource_type')->entity));
-        $nodeResourceModelType = $entity->get('field_resource_type')->entity->getName();
-        $nodeModelType = $entity->get('field_model')->entity->getName();
-        $immediate_parent_id = ($entity->hasField('field_member_of') && $entity->field_member_of instanceof Drupal\node\Entity\Node) ? $entity->get('field_member_of')->entity->id() : FALSE;
+        if ($empty_field_resource_type) {
+          $nodeResourceModelType = $entity->get('field_resource_type')->entity->getName();
+          $nodeModelType = $entity->get('field_model')->entity->getName();
+          $immediate_parent_id = ($entity->hasField('field_member_of') && $entity->field_member_of instanceof Drupal\node\Entity\Node) ? $entity->get('field_member_of')->entity->id() : FALSE;
+        }
       } else {
         // Manually override for the OCR page.
         $nodeResourceModelType = "Text";
@@ -956,7 +958,7 @@ function islandora_install_profile_demo_core_node_update(NodeInterface $node) {
   }
 
   $term = reset($terms);
-  
+
   $found = FALSE;
   foreach (GroupContent::loadByEntity($node) as $group_content) {
     $group = $group_content->getGroup();
@@ -993,7 +995,7 @@ function islandora_install_profile_demo_core_node_delete(NodeInterface $node) {
  * Implements hook_media_insert().
  */
 function islandora_install_profile_demo_core_media_insert(MediaInterface $media) {
-  $node = \Drupal::service('islandora.utils')->getParentNode($media); 
+  $node = \Drupal::service('islandora.utils')->getParentNode($media);
 
   if (empty($node)) {
     return;
@@ -1027,7 +1029,7 @@ function islandora_install_profile_demo_core_media_insert(MediaInterface $media)
  * Implements hook_media_update().
  */
 function islandora_install_profile_demo_core_media_update(MediaInterface $media) {
-  $node = \Drupal::service('islandora.utils')->getParentNode($media); 
+  $node = \Drupal::service('islandora.utils')->getParentNode($media);
 
   // Unindex if removed from a node.
   if (empty($node)) {
@@ -1062,7 +1064,7 @@ function islandora_install_profile_demo_core_media_update(MediaInterface $media)
   }
 
   $term = reset($terms);
-  
+
   $found = FALSE;
   foreach (GroupContent::loadByEntity($media) as $group_content) {
     $group = $group_content->getGroup();
