@@ -1,6 +1,6 @@
 name: 'Drush Site-Install'
 mail: admin@example.com
-slogan: 'Islandora 8 Digital Collections'
+slogan: 'Islandora Digital Collections'
 page:
   front: /node/1
   403: ''
