@@ -736,7 +736,6 @@ function islandora_install_profile_demo_core_entity_view(array &$build, EntityIn
             $build['object_navigation']['#links']['pages']['attributes'] = new Attribute(['class' => ['horizontal-tab-button'] ]);
             break;
           case 'OCR_Text':
-	    dd("I STILL BROKE YA");
             $build['object_navigation']['#links']['parent']['url'] = $immediate_parent_id;
             $build['object_navigation']['#links']['parent']['label'] = t('Full View');
             $build['object_navigation']['#links']['parent']['attributes'] = new Attribute(['class' => ['horizontal-tab-button']]);
