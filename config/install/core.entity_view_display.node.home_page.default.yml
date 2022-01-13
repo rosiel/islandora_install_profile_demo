@@ -38,19 +38,6 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 13
             additional: {  }
-          9eb7eabc-1776-4cc4-b21f-a48536262066:
-            uuid: 9eb7eabc-1776-4cc4-b21f-a48536262066
-            region: content
-            configuration:
-              id: 'views_block:home_page_featured_collections-block_1'
-              label: ''
-              provider: views
-              label_display: '0'
-              views_label: ''
-              items_per_page: '3'
-              context_mapping: {  }
-            weight: 15
-            additional: {  }
           7ffe5cc9-a1fb-4f73-b28a-623377c74864:
             uuid: 7ffe5cc9-a1fb-4f73-b28a-623377c74864
             region: content
