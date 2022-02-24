@@ -17,7 +17,7 @@ conditions:
     parent_reference_field: field_member_of
     model_uri: 'http://vocab.getty.edu/aat/300242735'
     logic: and
-    uri: 'http://purl.org/dc/dcmitype/Collection'
+    uri: null
     context_mapping:
       node: '@node.node_route_context:node'
 reactions:

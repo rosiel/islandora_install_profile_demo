@@ -15,7 +15,7 @@ conditions:
     negate: false
     context_mapping:
       media: '@islandora.media_route_context_provider:media'
-    uri: 'http://purl.org/coar/resource_type/c_c513,http://purl.org/dc/dcmitype/StillImage'
+    uri: 'http://purl.org/coar/resource_type/c_c513'
     logic: and
 reactions: {  }
 weight: -12

@@ -15,7 +15,7 @@ conditions:
     negate: false
     context_mapping:
       node: '@node.node_route_context:node'
-    uri: 'http://purl.org/dc/dcmitype/Collection,http://vocab.getty.edu/aat/300242735'
+    uri: 'http://vocab.getty.edu/aat/300242735'
     logic: and
 reactions:
   view_mode_alter:

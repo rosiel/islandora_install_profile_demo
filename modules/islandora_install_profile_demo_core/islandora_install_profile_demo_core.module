@@ -660,18 +660,17 @@ function islandora_install_profile_demo_core_entity_view(array &$build, EntityIn
     //kpr($context_manager->getActiveContexts());
     //\Drupal::messenger()->addStatus($view_mode);
     //  Added to avoid error message.
-    $empty_field_resource_type = '';
+    $empty_field_model = '';
+    $nodeModelType = '';
     if ($display->getComponent('object_navigation') || ($entity->bundle() === 'extracted_text')) {
       if ($entity->bundle() != 'extracted_text') {
-        $empty_field_resource_type = (!empty($entity->get('field_resource_type')->entity));
-        if ($empty_field_resource_type) {
-          $nodeResourceModelType = $entity->get('field_resource_type')->entity->getName();
+        $empty_field_model = (!empty($entity->get('field_model')->entity));
+        if ($empty_field_model) {
           $nodeModelType = $entity->get('field_model')->entity->getName();
           $immediate_parent_id = ($entity->hasField('field_member_of') && $entity->field_member_of instanceof Drupal\node\Entity\Node) ? $entity->get('field_member_of')->entity->id() : FALSE;
         }
       } else {
         // Manually override for the OCR page.
-        $nodeResourceModelType = "Text";
         $nodeModelType = "OCR";
         if (isset($parentNode) && $parentNode->hasField('field_member_of')) {
           $grandparent = $parentNode->get('field_member_of')->first();
@@ -697,7 +696,7 @@ function islandora_install_profile_demo_core_entity_view(array &$build, EntityIn
       $url_object = Drupal\Core\Url::fromRoute('entity.node.canonical', ['node' => $entity->id()], $options);
       // $displays = ['Full View', 'Pages', 'Page', 'OCR'];
 
-      if ($empty_field_resource_type || ($entity->bundle() === 'extracted_text')) {
+      if ($empty_field_model || ($entity->bundle() === 'extracted_text')) {
         $build['object_navigation'] = [
           '#theme' => 'islandora_object_links',
           '#links' => [ ]
@@ -705,9 +704,9 @@ function islandora_install_profile_demo_core_entity_view(array &$build, EntityIn
         // This relies on there being a display media for each of these.
         // Admin > Structure > Views > Display media
         // The view uses the Taxonomy > islandora_media_use's PCDM URI to assign a page.
-        switch ("{$nodeModelType}_{$nodeResourceModelType}") {
+        switch ($nodeModelType) {
           // PDF
-          case 'Digital Document_Text';
+          case 'Digital Document';
           if ($ocrExist) {
             $parent_url = Url::fromRoute('entity.node.canonical', ['node' => $immediate_parent_id], ['absolute' => TRUE]);
             $build['object_navigation']['#links']['parent']['label'] = t('Full View');
@@ -719,13 +718,13 @@ function islandora_install_profile_demo_core_entity_view(array &$build, EntityIn
           }
           break;
           // Newspaper
-          case 'Newspaper_Collection':
+          case 'Newspaper':
             break;
-          case 'Publication Issue_Collection':
-          case 'Paged Content_Interactive Resource':
-          case 'Paged Content_Collection':
-          case 'Book_Collection':
-          case 'Content_Interactive Resource':
+          case 'Publication Issue':
+          case 'Paged Content':
+          case 'Paged Content':
+          case 'Book':
+          case 'Content':
             // Current Page, no need for it to be a link
             $parent_url =  Url::fromRoute('entity.node.canonical', ['node' => $immediate_parent_id], ['absolute' => TRUE]);
             $build['object_navigation']['#links']['parent']['label'] = t('Full View');
@@ -735,7 +734,7 @@ function islandora_install_profile_demo_core_entity_view(array &$build, EntityIn
             $build['object_navigation']['#links']['pages']['label'] = t('Pages');
             $build['object_navigation']['#links']['pages']['attributes'] = new Attribute(['class' => ['horizontal-tab-button'] ]);
             break;
-          case 'OCR_Text':
+          case 'OCR':
             $build['object_navigation']['#links']['parent']['url'] = $immediate_parent_id;
             $build['object_navigation']['#links']['parent']['label'] = t('Full View');
             $build['object_navigation']['#links']['parent']['attributes'] = new Attribute(['class' => ['horizontal-tab-button']]);
@@ -755,9 +754,7 @@ function islandora_install_profile_demo_core_entity_view(array &$build, EntityIn
             $build['object_navigation']['#links']['ocr']['attributes'] = new Attribute(['class' => ['selected', 'horizontal-tab-button']]);
             $build['object_navigation']['#links']['ocr']['label'] = t('OCR');
             break;
-          case 'Page_Text':
-          case 'Page_Still Image':
-          case 'Page_Image':
+          case 'Page':
           if ($immediate_parent_id) {
             $parent_url = Url::fromRoute('entity.node.canonical', ['node' => $immediate_parent_id], ['absolute' => TRUE]);
             $build['object_navigation']['#links']['parent']['url'] = $parent_url;
@@ -830,17 +827,6 @@ function islandora_install_profile_demo_core_module_implements_alter(&$implement
       break;
   }
 }
-
-/**
- * Implements hook_preprocess_HOOK().
- */
-function islandora_install_profile_demo_core_preprocess_node(&$variables) {
-  $node = \Drupal::routeMatch()->getParameter('node');
-  if ($node instanceof \Drupal\node\NodeInterface && $node->hasField('field_resource_type')) {
-
-  }
-}
-
 
 /**
  * Implements hook_views_pre_view().
