@@ -103,7 +103,7 @@
         "drupal/devel": "^4.1",
         "drupal/ds": "^3.13",
         "drupal/environment_indicator": "^4.0",
-        "drupal/facets": "^1.8",
+        "drupal/facets": "^2.0",
         "drupal/features": "^3.11",
         "drupal/file_download_link": "^1.1",
 	"drupal/fixed_block_content": "^1.1",
