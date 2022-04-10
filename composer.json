@@ -146,7 +146,7 @@
         "drupal/views_exposed_filter_blocks": "^1.0",
         "drupal/views_field_view": "^1.0@beta",
         "drupal/views_flipped_table": "^1.4",
-        "drush/drush": "^10.3",
+        "drush/drush": "10.6.2",
         "islandora-rdm/islandora_fits": "dev-8.x-1.x",
         "islandora/controlled_access_terms": "2.x-dev",
         "islandora/islandora_defaults": "2.x-dev",
