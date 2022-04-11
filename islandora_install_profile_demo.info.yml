@@ -47,6 +47,7 @@ install:
   - drupal:basic_auth
   - drupal:devel
   - drupal:matomo
+  - drupal:migrate_tools
   - drupal:syslog
   - drupal:twig_tweak
   - drupal:pdf
@@ -66,6 +67,7 @@ install:
   - drupal:layout_discovery
   - drupal:title_field_for_manage_display
   - drupal:search_api_autocomplete
+  - drupal:search_api_solr_defaults
   - drupal:fontawesome
   - drupal:environment_indicator
   - drupal:environment_indicator_ui
