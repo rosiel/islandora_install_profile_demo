@@ -28,6 +28,7 @@ install:
   - drupal:big_pipe
   - drupal:taxonomy
   - drupal:dblog
+  - drupal:entity
   - drupal:search
   - drupal:shortcut
   - drupal:toolbar
