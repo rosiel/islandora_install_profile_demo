@@ -11,7 +11,7 @@
         },
         {
             "name": "Hertzel Armengol",
-            "role": "Owner",
+            "role": "Author",
             "email": "hertzel@born-digital.com"
         }
     ],
@@ -117,6 +117,7 @@
         "drupal/mailsystem": "^4.3",
         "drupal/matomo": "^1.17",
         "drupal/metatag": "^1.16",
+	"drupal/migrate_tools": "^5.1",
         "drupal/name": "1.0.0-rc3",
         "drupal/oembed_providers": "2.0.0-rc2",
         "drupal/paragraphs": "^1.10",
@@ -146,7 +147,7 @@
         "drupal/views_exposed_filter_blocks": "^1.0",
         "drupal/views_field_view": "^1.0@beta",
         "drupal/views_flipped_table": "^1.4",
-        "drush/drush": "^10.5",
+        "drush/drush": "10.6.2",
         "islandora-rdm/islandora_fits": "dev-8.x-1.x",
         "islandora/controlled_access_terms": "2.x-dev",
         "islandora/islandora_defaults": "2.x-dev",
