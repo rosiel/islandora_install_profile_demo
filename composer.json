@@ -155,7 +155,7 @@
         "islandora/islandora_base_theme": "dev-main",
         "islandora/islandora_starter_theme": "dev-main",
         "mglaman/drupal-check": "1.1.10",
-        "mjordan/islandora_workbench_integration": "^1.0",
+        "mjordan/islandora_workbench_integration": "dev-main",
         "oomphinc/composer-installers-extender": "^2",
         "vlucas/phpdotenv": "4.2.0",
         "webflo/drupal-finder": "^1.2",
