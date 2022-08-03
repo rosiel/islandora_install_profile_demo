@@ -15,7 +15,7 @@ conditions:
     negate: false
     context_mapping:
       node: '@node.node_route_context:node'
-    uri: 'https://github.com/Islandora/Crayfish/tree/dev/Homarus'
+    uri: 'http://purl.org/coar/resource_type/c_12ce'
     logic: and
 reactions:
   view_mode_alter:
