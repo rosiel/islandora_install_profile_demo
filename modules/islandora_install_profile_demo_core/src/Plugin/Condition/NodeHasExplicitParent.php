@@ -175,7 +175,7 @@ class NodeHasExplicitParent extends ConditionPluginBase implements ContainerFact
    */
   public function evaluate() {
      $entity = $this->getContextValue('node');
-    if ((empty($this->configuration['uri']) && !$this->isNegated()) || (empty($this->configuration['model_uri']) && !$this->isNegated())) {
+    if ((empty($this->configuration['model_uri']) && !$this->isNegated())) {
       return TRUE;
     }
 
