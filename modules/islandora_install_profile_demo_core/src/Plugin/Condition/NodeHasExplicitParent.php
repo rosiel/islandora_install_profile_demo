@@ -124,21 +124,6 @@ class NodeHasExplicitParent extends ConditionPluginBase implements ContainerFact
       '#description' => t("Machine name of field that contains references to parent node."),
     ];
 
-    $form['term_resource_type'] = [
-      '#type' => 'entity_autocomplete',
-      '#title' => $this->t('Select Parent taxonomy term(s) reference with URI (resource type)'),
-      '#description' => $this->t('Only terms that have external URIs/URLs will appear here.'),
-      '#tags' => TRUE,
-      '#default_value' => $uri_default,
-      '#target_type' => 'taxonomy_term',
-      '#required' => FALSE,
-      '#selection_handler' => 'islandora:external_uri',
-      '#selection_settings' => [
-        'target_bundles' => array('resource_types'),
-      ],
-
-    ];
-
 
     $form['term_model'] = array(
       '#type' => 'entity_autocomplete',
@@ -161,7 +146,7 @@ class NodeHasExplicitParent extends ConditionPluginBase implements ContainerFact
    */
   public function submitConfigurationForm(array &$form, FormStateInterface $form_state) {
     // Set URI for term if possible.
-    $defaults = ['uri' => "term_resource_type", 'model_uri' => 'term_model'];
+    $defaults = ['model_uri' => 'term_model'];
     foreach ($defaults as $field => $result_variable) {
       $this->configuration[$field] = NULL;
       $value = $form_state->getValue($result_variable);
@@ -190,7 +175,7 @@ class NodeHasExplicitParent extends ConditionPluginBase implements ContainerFact
    */
   public function evaluate() {
      $entity = $this->getContextValue('node');
-    if ((empty($this->configuration['uri']) && !$this->isNegated()) || (empty($this->configuration['model_uri']) && !$this->isNegated())) {
+    if ((empty($this->configuration['model_uri']) && !$this->isNegated())) {
       return TRUE;
     }
 

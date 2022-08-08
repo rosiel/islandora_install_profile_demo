@@ -19,6 +19,7 @@ islandora_models,"Compound Object","A special type of collection where the paren
 islandora_models,"Newspaper","A special type of collection which only has Newspaper Issues for children.",https://schema.org/Newspaper
 islandora_display,"Open Seadragon","Display using the Open Seadragon viewer",http://openseadragon.github.io
 islandora_display,"PDFjs","Display using the PDF.js viewer",http://mozilla.github.io/pdf.js
+islandora_display,"Remote Video","Displays video from another site",https://github.com/Islandora/Crayfish/tree/dev/Homarus
 resource_types,"Collection","An aggregation of resources",http://purl.org/dc/dcmitype/Collection
 resource_types,"Dataset","Data encoded in a defined structure",http://purl.org/dc/dcmitype/Dataset
 resource_types,"Image","A visual representation other than text",http://purl.org/dc/dcmitype/Image
