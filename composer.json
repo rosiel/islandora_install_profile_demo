@@ -100,6 +100,7 @@
         "drupal/config_update": "^1.7",
         "drupal/console": "dev-master",
         "drupal/context": "4.x-dev#14c362a5c57457692cdb1335c24619e6ae76af94",
+	"drupal/ctools": "4.0.0",
         "drupal/devel": "^4.1",
         "drupal/ds": "^3.13",
         "drupal/environment_indicator": "^4.0",
