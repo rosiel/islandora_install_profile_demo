@@ -2,14 +2,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - views.view.members
     - views.view.solr_search_content
   module:
     - islandora
     - views
-  enforced:
-    module:
-      - islandora_defaults
 label: Collection
 name: collection
 group: Display
@@ -22,7 +18,7 @@ conditions:
     negate: false
     context_mapping:
       node: '@node.node_route_context:node'
-    uri: 'http://purl.org/dc/dcmitype/Collection,http://purl.org/dc/dcmitype/Collection#Model'
+    uri: 'http://purl.org/dc/dcmitype/Collection'
     logic: and
 reactions:
   blocks:
@@ -46,7 +42,7 @@ reactions:
         id: 'views_block:solr_search_content-block_1'
         label: ''
         provider: views
-        label_display: '0'
+        label_display: visible
         region: content
         weight: '0'
         custom_id: views_block_solr_search_content_block_1
@@ -57,10 +53,33 @@ reactions:
         context_mapping: {  }
         views_label: ''
         items_per_page: none
-    include_default_blocks: 1
+        third_party_settings:
+          block_class:
+            classes: ''
+    include_default_blocks: 0
     saved: false
   view_mode_alter:
     id: view_mode_alter
     mode: node.collection
     saved: false
-weight: 1
+  menu:
+    id: menu
+    menu: {  }
+    saved: false
+  body_class:
+    id: body_class
+    body_class: ''
+    saved: false
+  page_template_suggestions:
+    id: page_template_suggestions
+    suggestions: ''
+    saved: false
+  form_display_alter:
+    id: form_display_alter
+    mode: block_content.default
+    saved: false
+  alter_jsonld_type:
+    id: alter_jsonld_type
+    source_field: id
+    saved: false
+weight: 0
